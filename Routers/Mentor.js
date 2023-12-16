@@ -82,7 +82,8 @@ router.put("/assignstudents/:id", async (request, response) => {
     
 
    const previousMentor = await Student.find({StudentName:{$in:students}})
- 
+   console.log(students)
+ console.log(previousMentor)
     const assignMentor = await Student.updateMany(
       { StudentName: { $in: students }
     },
